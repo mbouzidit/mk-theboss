@@ -133,6 +133,14 @@ export class NameDisplayComponent {
       let currentCardHeight = Math.sqrt(cardArea / cardAspectRatio);
       let currentCardWidth = currentCardHeight * cardAspectRatio;
       let currentFontSizePx = currentCardHeight / FONT_HEIGHT_MULTIPLIER;
+
+      if (currentCardWidth > containerWidth) {
+        const scaleDownFactor = (containerWidth / currentCardWidth) * 0.95; // 5% margin
+        currentCardWidth = currentCardWidth * scaleDownFactor;
+        currentCardHeight = currentCardHeight * scaleDownFactor;
+        currentFontSizePx = currentFontSizePx * scaleDownFactor;
+      }
+
       let bestPos: { x: number; y: number } | null = null;
 
       let placementAttempt = 0;
