@@ -135,7 +135,7 @@ export class NameDisplayComponent {
       let currentFontSizePx = currentCardHeight / FONT_HEIGHT_MULTIPLIER;
 
       if (currentCardWidth > containerWidth) {
-        const scaleDownFactor = (containerWidth / currentCardWidth) * 0.95; // 5% margin
+        const scaleDownFactor = (containerWidth / currentCardWidth); 
         currentCardWidth = currentCardWidth * scaleDownFactor;
         currentCardHeight = currentCardHeight * scaleDownFactor;
         currentFontSizePx = currentFontSizePx * scaleDownFactor;
