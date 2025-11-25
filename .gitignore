@@ -91,7 +91,6 @@ public/build/
 
 # Gatsby build output
 .cache/
-public
 
 # Angular
 /dist
