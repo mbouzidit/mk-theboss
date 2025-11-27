@@ -15,8 +15,8 @@ interface WordRect {
 }
 
 interface ColorScheme {
-    color: string;
-    shadow: string;
+  color: string;
+  shadow: string;
 }
 
 interface ExpiringName {
@@ -77,32 +77,32 @@ export class NameDisplayComponent {
   names = signal<StyledName[]>([]);
 
   private readonly colorPalette: ColorScheme[] = [
-    { color: '#f87171', shadow: 'rgba(248, 113, 113, 0.5)' }, 
-    { color: '#fbbf24', shadow: 'rgba(251, 191, 36, 0.5)' },  
-    { color: '#a78bfa', shadow: 'rgba(167, 139, 250, 0.5)' }, 
-    { color: '#34d399', shadow: 'rgba(52, 211, 153, 0.5)' },  
-    { color: '#60a5fa', shadow: 'rgba(96, 165, 250, 0.5)' },  
-    { color: '#fb923c', shadow: 'rgba(251, 146, 60, 0.5)' },  
-    { color: '#f472b6', shadow: 'rgba(244, 114, 182, 0.5)' }, 
-    { color: '#2dd4bf', shadow: 'rgba(45, 212, 191, 0.5)' },  
-    { color: '#818cf8', shadow: 'rgba(30, 46, 195, 0.5)' }, 
-    { color: '#facc15', shadow: 'rgba(146, 126, 45, 0.5)' }   
+    { color: '#f87171', shadow: 'rgba(248, 113, 113, 0.5)' },
+    { color: '#fbbf24', shadow: 'rgba(251, 191, 36, 0.5)' },
+    { color: '#a78bfa', shadow: 'rgba(167, 139, 250, 0.5)' },
+    { color: '#34d399', shadow: 'rgba(52, 211, 153, 0.5)' },
+    { color: '#60a5fa', shadow: 'rgba(96, 165, 250, 0.5)' },
+    { color: '#fb923c', shadow: 'rgba(251, 146, 60, 0.5)' },
+    { color: '#f472b6', shadow: 'rgba(244, 114, 182, 0.5)' },
+    { color: '#2dd4bf', shadow: 'rgba(45, 212, 191, 0.5)' },
+    { color: '#818cf8', shadow: 'rgba(30, 46, 195, 0.5)' },
+    { color: '#facc15', shadow: 'rgba(146, 126, 45, 0.5)' }
   ];
 
-  private readonly permanentNames: string[] = ['MK TheBoss', 'Mohamed', 'Wafa', 
+  private readonly permanentNames: string[] = ['MK TheBoss', 'Mohamed', 'Wafa',
     'Fouad', 'Khawla', 'Soumaya', 'Lina', 'Youssef', 'Wala', 'Ikhlass'];
-  
+
   private readonly nonPermanentNames: ExpiringName[] = [
-    { name: 'MK TheBoss', expiresAt: new Date('2099-01-01T00:00:00Z') },
-    { name: 'Siby', expiresAt: new Date('2023-10-26T00:00:00Z') },
+    { name: 'MK TheBoss', expiresAt: new Date('2099-12-31T23:59:59Z') },
+    { name: 'Siby', expiresAt: new Date('2099-12-31T23:59:59Z') },
     { name: 'Naïa', expiresAt: new Date('2099-12-31T23:59:59Z') },
-    { name: 'Zoé', expiresAt: new Date('2023-01-01T00:00:00Z') },
+    { name: 'Zoé', expiresAt: new Date('2099-12-31T23:59:59Z') },
     { name: 'Liam', expiresAt: new Date('2099-12-31T23:59:59Z') },
     { name: 'Kyrie Elijah', expiresAt: new Date('2099-12-31T23:59:59Z') },
-    { name: 'Djibril', expiresAt: new Date('2023-05-20T00:00:00Z') },
+    { name: 'Djibril', expiresAt: new Date('2099-12-31T23:59:59Z') },
     { name: 'Ornella', expiresAt: new Date('2099-12-31T23:59:59Z') },
     { name: 'Jonas', expiresAt: new Date('2099-12-31T23:59:59Z') },
-    { name: 'Kiara', expiresAt: new Date('2023-11-15T00:00:00Z') },
+    { name: 'Kiara', expiresAt: new Date('2099-12-31T23:59:59Z') },
     { name: 'Ava', expiresAt: new Date('2099-12-31T23:59:59Z') },
     { name: 'Mia', expiresAt: new Date('2099-12-31T23:59:59Z') },
     { name: 'Isabella', expiresAt: new Date('2099-12-31T23:59:59Z') },
@@ -111,7 +111,7 @@ export class NameDisplayComponent {
     { name: 'Amelia', expiresAt: new Date('2099-12-31T23:59:59Z') },
     { name: 'Evelyn', expiresAt: new Date('2099-12-31T23:59:59Z') },
     { name: 'Abigail', expiresAt: new Date('2099-12-31T23:59:59Z') },
-    { name: 'Harper', expiresAt: new Date('2099-12-31T23:59:59Z' ) },
+    { name: 'Harper', expiresAt: new Date('2099-12-31T23:59:59Z') },
     { name: 'Emily', expiresAt: new Date('2099-12-31T23:59:59Z') },
     { name: 'Elizabeth', expiresAt: new Date('2099-12-31T23:59:59Z') },
     { name: 'Avery', expiresAt: new Date('2099-12-31T23:59:59Z') },
@@ -186,8 +186,8 @@ export class NameDisplayComponent {
     const rest = [...this.permanentNames, ...this.selectedNonPermanentNames.slice(1, 40)];
 
     for (let i = rest.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [rest[i], rest[j]] = [rest[j], rest[i]];
+      const j = Math.floor(Math.random() * (i + 1));
+      [rest[i], rest[j]] = [rest[j], rest[i]];
     }
 
     return [first, ...rest];
@@ -210,8 +210,8 @@ export class NameDisplayComponent {
     const totalArea = containerWidth * containerHeight * 0.9;
     const weights = list.map((_, i) => 1 / Math.pow(i + 1, 1.5));
     const totalWeight = weights.reduce((sum, w) => sum + w, 0);
-    
-    const FONT_ASPECT_RATIO_MULTIPLIER = 0.6; 
+
+    const FONT_ASPECT_RATIO_MULTIPLIER = 0.6;
     const FONT_HEIGHT_MULTIPLIER = 1.2;
 
     for (let i = 0; i < list.length; i++) {
@@ -225,7 +225,7 @@ export class NameDisplayComponent {
       let currentFontSizePx = currentCardHeight / FONT_HEIGHT_MULTIPLIER;
 
       if (currentCardWidth > containerWidth) {
-        const scaleDownFactor = (containerWidth / currentCardWidth); 
+        const scaleDownFactor = (containerWidth / currentCardWidth);
         currentCardWidth = currentCardWidth * scaleDownFactor;
         currentCardHeight = currentCardHeight * scaleDownFactor;
         currentFontSizePx = currentFontSizePx * scaleDownFactor;
@@ -236,8 +236,8 @@ export class NameDisplayComponent {
       let placementAttempt = 0;
       while (bestPos === null && placementAttempt < 10) {
         if (i === 0) {
-            bestPos = { x: containerWidth / 2, y: containerHeight / 2 };
-            break;
+          bestPos = { x: containerWidth / 2, y: containerHeight / 2 };
+          break;
         }
 
         let spiralAngle = Math.random() * 2 * Math.PI;
@@ -254,7 +254,7 @@ export class NameDisplayComponent {
             bestPos = { x, y };
             break;
           }
-          
+
           spiralAngle += 0.25;
           spiralRadius += 1;
           searchAttempts++;
@@ -290,7 +290,7 @@ export class NameDisplayComponent {
           },
         });
       } else {
-          console.warn('Could not place word after multiple retries:', name);
+        console.warn('Could not place word after multiple retries:', name);
       }
     }
     return styledNames;
