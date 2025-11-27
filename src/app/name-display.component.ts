@@ -77,16 +77,26 @@ export class NameDisplayComponent {
   names = signal<StyledName[]>([]);
 
   private readonly colorPalette: ColorScheme[] = [
-    { color: '#f87171', shadow: 'rgba(248, 113, 113, 0.5)' },
-    { color: '#fbbf24', shadow: 'rgba(251, 191, 36, 0.5)' },
-    { color: '#a78bfa', shadow: 'rgba(167, 139, 250, 0.5)' },
-    { color: '#34d399', shadow: 'rgba(52, 211, 153, 0.5)' },
-    { color: '#60a5fa', shadow: 'rgba(96, 165, 250, 0.5)' },
+    { color: '#ef4444', shadow: 'rgba(239, 68, 68, 0.5)' },
+    { color: '#f97316', shadow: 'rgba(249, 115, 22, 0.5)' },
+    { color: '#f59e0b', shadow: 'rgba(245, 158, 11, 0.5)' },
+    { color: '#eab308', shadow: 'rgba(234, 179, 8, 0.5)' },
     { color: '#fb923c', shadow: 'rgba(251, 146, 60, 0.5)' },
-    { color: '#f472b6', shadow: 'rgba(244, 114, 182, 0.5)' },
-    { color: '#2dd4bf', shadow: 'rgba(45, 212, 191, 0.5)' },
-    { color: '#818cf8', shadow: 'rgba(30, 46, 195, 0.5)' },
-    { color: '#facc15', shadow: 'rgba(146, 126, 45, 0.5)' }
+    { color: '#84cc16', shadow: 'rgba(132, 204, 22, 0.5)' },
+    { color: '#22c55e', shadow: 'rgba(34, 197, 94, 0.5)' },
+    { color: '#10b981', shadow: 'rgba(16, 185, 129, 0.5)' },
+    { color: '#34d399', shadow: 'rgba(52, 211, 153, 0.5)' },
+    { color: '#06b6d4', shadow: 'rgba(6, 182, 212, 0.5)' },
+    { color: '#0ea5e9', shadow: 'rgba(14, 165, 233, 0.5)' },
+    { color: '#3b82f6', shadow: 'rgba(59, 130, 246, 0.5)' },
+    { color: '#6366f1', shadow: 'rgba(99, 102, 241, 0.5)' },
+    { color: '#8b5cf6', shadow: 'rgba(139, 92, 246, 0.5)' },
+    { color: '#a855f7', shadow: 'rgba(168, 85, 247, 0.5)' },
+    { color: '#d946ef', shadow: 'rgba(217, 70, 239, 0.5)' },
+    { color: '#ec4899', shadow: 'rgba(236, 72, 153, 0.5)' },
+    { color: '#f43f5e', shadow: 'rgba(244, 63, 94, 0.5)' },
+    { color: '#64748b', shadow: 'rgba(100, 116, 139, 0.5)' },
+    { color: '#14b8a6', shadow: 'rgba(20, 184, 166, 0.5)' }
   ];
 
   private readonly permanentNames: string[] = ['MK TheBoss', 'Mohamed', 'Wafa',
